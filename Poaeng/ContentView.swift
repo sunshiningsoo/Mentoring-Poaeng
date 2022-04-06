@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
+            //탭뷰는 이하와 같은 양식으로 작성하고 작동합니다.
+            //MainView, SearchView, ReservationView, MyPageView는 각각 해당 버튼을 클릭하면 나타날 View를 의미하며 다른 스위프트 파일로 구현되어있습니다.
             MainView()
                 .tabItem{
                     Image(systemName: "house.fill")
