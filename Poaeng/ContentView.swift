@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var searchKeyword:String
     var body: some View {
         TabView {
             //탭뷰는 이하와 같은 양식으로 작성하고 작동합니다.
@@ -17,7 +18,7 @@ struct ContentView: View {
                     Image(systemName: "house.fill")
                     Text("메인")
                 }
-            SearchView()
+            SearchView(searchKeyword: $searchKeyword)
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("검색")
@@ -27,7 +28,6 @@ struct ContentView: View {
                     Image(systemName: "calendar")
                     Text("예약")
                 }
-                    
             MyPageView()
                 .tabItem {
                     Image(systemName: "person")
@@ -39,6 +39,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(searchKeyword: "키워드를 입력하세요")
     }
 }
