@@ -18,12 +18,14 @@
 		7B6632DA27FD0B3700C60FF9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6632D927FD0B3700C60FF9 /* SearchView.swift */; };
 		7B6632DC27FD0B7B00C60FF9 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6632DB27FD0B7B00C60FF9 /* MyPageView.swift */; };
 		7B6632DE27FD0B9E00C60FF9 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6632DD27FD0B9E00C60FF9 /* ReservationView.swift */; };
+		8C11C7AF2803BF4E00B57D8A /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11C7AE2803BF4E00B57D8A /* BlurView.swift */; };
+		8C11C7B12803BFF600B57D8A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11C7B02803BFF600B57D8A /* TimerView.swift */; };
+		8C11C7B32803C08B00B57D8A /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11C7B22803C08B00B57D8A /* CallView.swift */; };
 		DF044F2D2803AC3100671D15 /* MentorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF044F2C2803AC3100671D15 /* MentorProfileView.swift */; };
 		DF6B756D27FECDC100FD7180 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B756C27FECDC100FD7180 /* User.swift */; };
 		DF6B756F27FECE6D00FD7180 /* UsersArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B756E27FECE6D00FD7180 /* UsersArray.swift */; };
 		DF6B757127FED6DE00FD7180 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B757027FED6DE00FD7180 /* UserDetail.swift */; };
 		DFDE273627FE989D003478CF /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE273527FE989D003478CF /* UserRow.swift */; };
-		DFDE273827FEC0AD003478CF /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE273727FEC0AD003478CF /* CallView.swift */; };
 		DFE45FE027FE87AB007C3606 /* MentoringScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE45FDF27FE87AB007C3606 /* MentoringScreenView.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,12 +61,14 @@
 		7B6632D927FD0B3700C60FF9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7B6632DB27FD0B7B00C60FF9 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		7B6632DD27FD0B9E00C60FF9 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
+		8C11C7AE2803BF4E00B57D8A /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		8C11C7B02803BFF600B57D8A /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		8C11C7B22803C08B00B57D8A /* CallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
 		DF044F2C2803AC3100671D15 /* MentorProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorProfileView.swift; sourceTree = "<group>"; };
 		DF6B756C27FECDC100FD7180 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DF6B756E27FECE6D00FD7180 /* UsersArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersArray.swift; sourceTree = "<group>"; };
 		DF6B757027FED6DE00FD7180 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		DFDE273527FE989D003478CF /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
-		DFDE273727FEC0AD003478CF /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
 		DFE45FDF27FE87AB007C3606 /* MentoringScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentoringScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,7 +126,9 @@
 				DFA17B9E27FFCD8000C7BE7C /* UserModel */,
 				DFA17B9F27FFCDA900C7BE7C /* MenuTab */,
 				DFE45FDF27FE87AB007C3606 /* MentoringScreenView.swift */,
-				DFDE273727FEC0AD003478CF /* CallView.swift */,
+				8C11C7B02803BFF600B57D8A /* TimerView.swift */,
+				8C11C7B22803C08B00B57D8A /* CallView.swift */,
+				8C11C7AE2803BF4E00B57D8A /* BlurView.swift */,
 				7B6632AB27FC246700C60FF9 /* Preview Content */,
 				7B6632A927FC246700C60FF9 /* Assets.xcassets */,
 				DF044F2C2803AC3100671D15 /* MentorProfileView.swift */,
@@ -306,15 +312,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C11C7B32803C08B00B57D8A /* CallView.swift in Sources */,
 				7B6632DC27FD0B7B00C60FF9 /* MyPageView.swift in Sources */,
 				DF6B757127FED6DE00FD7180 /* UserDetail.swift in Sources */,
+				8C11C7AF2803BF4E00B57D8A /* BlurView.swift in Sources */,
 				DFE45FE027FE87AB007C3606 /* MentoringScreenView.swift in Sources */,
 				7B6632D627FC99A000C60FF9 /* MainView.swift in Sources */,
+				8C11C7B12803BFF600B57D8A /* TimerView.swift in Sources */,
 				7B6632DE27FD0B9E00C60FF9 /* ReservationView.swift in Sources */,
 				7B6632DA27FD0B3700C60FF9 /* SearchView.swift in Sources */,
 				DF6B756F27FECE6D00FD7180 /* UsersArray.swift in Sources */,
 				7B6632A827FC246500C60FF9 /* ContentView.swift in Sources */,
-				DFDE273827FEC0AD003478CF /* CallView.swift in Sources */,
 				7B6632A627FC246500C60FF9 /* PoaengApp.swift in Sources */,
 				DF6B756D27FECDC100FD7180 /* User.swift in Sources */,
 				DF044F2D2803AC3100671D15 /* MentorProfileView.swift in Sources */,
