@@ -19,9 +19,13 @@
 		7B6632DC27FD0B7B00C60FF9 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6632DB27FD0B7B00C60FF9 /* MyPageView.swift */; };
 		7B6632DE27FD0B9E00C60FF9 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6632DD27FD0B9E00C60FF9 /* ReservationView.swift */; };
 		DF044F2D2803AC3100671D15 /* MentorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF044F2C2803AC3100671D15 /* MentorProfileView.swift */; };
+		DF044F2F2803C51900671D15 /* MentorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF044F2E2803C51900671D15 /* MentorListView.swift */; };
+		DF044F312803D01C00671D15 /* ReservationConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF044F302803D01C00671D15 /* ReservationConfirmView.swift */; };
 		DF6B756D27FECDC100FD7180 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B756C27FECDC100FD7180 /* User.swift */; };
 		DF6B756F27FECE6D00FD7180 /* UsersArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B756E27FECE6D00FD7180 /* UsersArray.swift */; };
 		DF6B757127FED6DE00FD7180 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B757027FED6DE00FD7180 /* UserDetail.swift */; };
+		DFD379FF2804050000D0A88B /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD379FE2804050000D0A88B /* BlurView.swift */; };
+		DFD37A01280408AA00D0A88B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A00280408AA00D0A88B /* TimerView.swift */; };
 		DFDE273627FE989D003478CF /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE273527FE989D003478CF /* UserRow.swift */; };
 		DFDE273827FEC0AD003478CF /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE273727FEC0AD003478CF /* CallView.swift */; };
 		DFE45FE027FE87AB007C3606 /* MentoringScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE45FDF27FE87AB007C3606 /* MentoringScreenView.swift */; };
@@ -60,9 +64,13 @@
 		7B6632DB27FD0B7B00C60FF9 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		7B6632DD27FD0B9E00C60FF9 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
 		DF044F2C2803AC3100671D15 /* MentorProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorProfileView.swift; sourceTree = "<group>"; };
+		DF044F2E2803C51900671D15 /* MentorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorListView.swift; sourceTree = "<group>"; };
+		DF044F302803D01C00671D15 /* ReservationConfirmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationConfirmView.swift; sourceTree = "<group>"; };
 		DF6B756C27FECDC100FD7180 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DF6B756E27FECE6D00FD7180 /* UsersArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersArray.swift; sourceTree = "<group>"; };
 		DF6B757027FED6DE00FD7180 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		DFD379FE2804050000D0A88B /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		DFD37A00280408AA00D0A88B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		DFDE273527FE989D003478CF /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
 		DFDE273727FEC0AD003478CF /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
 		DFE45FDF27FE87AB007C3606 /* MentoringScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentoringScreenView.swift; sourceTree = "<group>"; };
@@ -121,11 +129,10 @@
 				7B6632D527FC99A000C60FF9 /* MainView.swift */,
 				DFA17B9E27FFCD8000C7BE7C /* UserModel */,
 				DFA17B9F27FFCDA900C7BE7C /* MenuTab */,
-				DFE45FDF27FE87AB007C3606 /* MentoringScreenView.swift */,
-				DFDE273727FEC0AD003478CF /* CallView.swift */,
+				DFD37A0228040AD700D0A88B /* Reservation */,
+				DFD37A0328040B5500D0A88B /* Mentoring */,
 				7B6632AB27FC246700C60FF9 /* Preview Content */,
 				7B6632A927FC246700C60FF9 /* Assets.xcassets */,
-				DF044F2C2803AC3100671D15 /* MentorProfileView.swift */,
 			);
 			path = Poaeng;
 			sourceTree = "<group>";
@@ -174,6 +181,27 @@
 				7B6632DB27FD0B7B00C60FF9 /* MyPageView.swift */,
 			);
 			path = MenuTab;
+			sourceTree = "<group>";
+		};
+		DFD37A0228040AD700D0A88B /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				DF044F2E2803C51900671D15 /* MentorListView.swift */,
+				DF044F2C2803AC3100671D15 /* MentorProfileView.swift */,
+				DF044F302803D01C00671D15 /* ReservationConfirmView.swift */,
+			);
+			path = Reservation;
+			sourceTree = "<group>";
+		};
+		DFD37A0328040B5500D0A88B /* Mentoring */ = {
+			isa = PBXGroup;
+			children = (
+				DFE45FDF27FE87AB007C3606 /* MentoringScreenView.swift */,
+				DFDE273727FEC0AD003478CF /* CallView.swift */,
+				DFD379FE2804050000D0A88B /* BlurView.swift */,
+				DFD37A00280408AA00D0A88B /* TimerView.swift */,
+			);
+			path = Mentoring;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,9 +338,13 @@
 				DF6B757127FED6DE00FD7180 /* UserDetail.swift in Sources */,
 				DFE45FE027FE87AB007C3606 /* MentoringScreenView.swift in Sources */,
 				7B6632D627FC99A000C60FF9 /* MainView.swift in Sources */,
+				DF044F312803D01C00671D15 /* ReservationConfirmView.swift in Sources */,
 				7B6632DE27FD0B9E00C60FF9 /* ReservationView.swift in Sources */,
 				7B6632DA27FD0B3700C60FF9 /* SearchView.swift in Sources */,
+				DFD37A01280408AA00D0A88B /* TimerView.swift in Sources */,
 				DF6B756F27FECE6D00FD7180 /* UsersArray.swift in Sources */,
+				DF044F2F2803C51900671D15 /* MentorListView.swift in Sources */,
+				DFD379FF2804050000D0A88B /* BlurView.swift in Sources */,
 				7B6632A827FC246500C60FF9 /* ContentView.swift in Sources */,
 				DFDE273827FEC0AD003478CF /* CallView.swift in Sources */,
 				7B6632A627FC246500C60FF9 /* PoaengApp.swift in Sources */,

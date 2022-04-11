@@ -1,6 +1,13 @@
+//
+//  TimerView.swift
+//  Poaeng
+//
+//  Created by 박성수 on 2022/04/11.
+//
+
 import SwiftUI
 
-struct CallView: View {
+struct TimerView: View {
     
     @State var timeRemaining = 1200
     @State var timerunnig = true
@@ -18,6 +25,9 @@ struct CallView: View {
     
     var body: some View {
         HStack {
+            Spacer()
+        
+            
             Text(convertSecondsToTime(timeInSeconds : timeRemaining))
             
                 .font(.system(size: 20))
@@ -32,10 +42,13 @@ struct CallView: View {
                     }
                 }
             Spacer()
-            
-            Button("시간 추가"){
+            Button (action: {
                 timeRemaining += 300
-            }
+            }){
+                VStack {
+                    Image(systemName: "hourglass.badge.plus")
+                    Text("More Time")
+                } }
             
 //            HStack(spacing: 40) {
 //                Button("Start") {
@@ -55,8 +68,9 @@ struct CallView: View {
 }
 
 
-struct CallView_Previews: PreviewProvider {
+
+struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        CallView()
+        TimerView()
     }
 }

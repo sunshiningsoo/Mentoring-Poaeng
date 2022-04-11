@@ -4,51 +4,65 @@
 //
 //  Created by Taehwan Kim on 2022/04/07.
 //
-
 import SwiftUI
 
 struct MentorProfileView: View {
     @State private var appointmentDate = Date()
-    //@State private var selectedTime = ""
-    //let threeMinute: [String] = ["00~19", "20~39", "40~59"]
+    @State private var selectedTime = ""
+    let threeMinute: [String] = ["1시", "2시", "3시", "4시", "5시", "6시"]
     
     var dateClosedRange: ClosedRange<Date> {
         let min = Calendar.current.date(byAdding: .day, value: 0, to: Date())!
         let max = Calendar.current.date(byAdding: .day, value: 30, to: Date())!
         return min...max
     }
-//    init() {
-//            UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.gray
-//
-//            let attributes: [NSAttributedString.Key:Any] = [
-//                .foregroundColor : UIColor.white
-//            ]
-//            UISegmentedControl.appearance().setTitleTextAttributes(attributes, for: .selected)
-//        }
+    init() {
+            UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.gray
+
+            let attributes: [NSAttributedString.Key:Any] = [
+                .foregroundColor : UIColor.white
+            ]
+            UISegmentedControl.appearance().setTitleTextAttributes(attributes, for: .selected)
+        }
     var body: some View {
         ScrollView{
             VStack{
-                //MentorInfoView()
-                //IntroduceView()
-                //MentorReviewView()
-                //MentorTimetableView()
-                VStack(alignment: .leading){
-                    Text("멘토링 일정 선택")
-                        .foregroundColor(Color.blue)
-                        .font(.largeTitle)
-                    DatePicker("당신의 생일을 선택해주세요", selection: $appointmentDate,
-                               in: dateClosedRange,
-                               displayedComponents: [.date])
-                    .datePickerStyle(.graphical)
+                MentorInfoView()
+                IntroduceView()
+                MentorReviewView()
+                MentorTimetableView()
+                VStack{
+                    VStack(alignment: .leading){
+                        Text("멘토링 일정 선택")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.blue)
+                            .font(.largeTitle)
+                        DatePicker("당신의 생일을 선택해주세요", selection: $appointmentDate,
+                                   in: dateClosedRange,
+                                   displayedComponents: [.date])
+                        .datePickerStyle(.graphical)
+                    }
+                    Picker(selection: $selectedTime,
+                                label: Text("TimePicker"),
+                                content: {
+                                    ForEach(threeMinute.indices) { index in
+                                        Text(threeMinute[index])
+                                            .tag(threeMinute[index])
+                                    }
+                            })
+                                .pickerStyle(SegmentedPickerStyle())
+                                .padding()
+                    NavigationLink(destination:ReservationConfirmView()){
+                        Text("신청하기")
+                            .font(.title2)
+                            .padding(13.0)
+                            .foregroundColor(Color.white)
+                            .background(Color.blue)
+                            .cornerRadius(20)
+                    }
+                    
+//                    .navigationBarHidden(true)
                 }
-//                Picker(selection: $selectedTime,
-//                               label: Text("picker"),
-//                               content: {
-//                                ForEach(filterOptions.indices) { index in
-//                                    Text(filterOptions[index])
-//                                        .tag(filterOptions[index])
-//                                }
-//                        })
             }
         }
     }
@@ -65,7 +79,7 @@ struct MentorInfoView: View {
         VStack{
             Image("포메")
                 .resizable()
-                .frame(width: 50, height: 50)
+                .frame(width: 250, height: 250)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(lineWidth: 3).foregroundColor(Color.black))
             Text("포메")
