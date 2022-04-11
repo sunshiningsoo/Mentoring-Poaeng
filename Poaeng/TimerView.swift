@@ -18,6 +18,9 @@ struct TimerView: View {
     
     var body: some View {
         HStack {
+            Spacer()
+        
+            
             Text(convertSecondsToTime(timeInSeconds : timeRemaining))
             
                 .font(.system(size: 20))
@@ -32,10 +35,13 @@ struct TimerView: View {
                     }
                 }
             Spacer()
-            
-            Button("시간 추가"){
+            Button (action: {
                 timeRemaining += 300
-            }
+            }){
+                VStack {
+                    Image(systemName: "hourglass.badge.plus")
+                    Text("More Time")
+                } }
             
 //            HStack(spacing: 40) {
 //                Button("Start") {
@@ -53,6 +59,7 @@ struct TimerView: View {
     }
 
 }
+
 
 
 struct TimerView_Previews: PreviewProvider {

@@ -32,7 +32,6 @@ struct CallView: View {
                         }
                     }
                     Spacer()
-                    TimerView()
                     Spacer()
                     
                     Button(action: {
@@ -66,6 +65,9 @@ struct CallView: View {
                         }.padding()
                     }
                     Spacer()
+                    
+                    TimerView()
+                    
                     Button(action: {
                         
                     }) {
@@ -97,14 +99,17 @@ struct CallView: View {
                             
                             
                             Text("사전질문")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
                             
                             ScrollView {
-                                VStack {
-                                Rectangle()
-                                        .frame(width: 390, height: 500)
-                                
-                                
-                                }
+                                Text("안녕하세요, 애플 아카데미 지원과 관련해 여쭙고 싶은 부분이 있어서 챗드립니다. 전공은 컴퓨터 쪽은 아니지만 프로그래밍을 배워보고 싶은 생각은 항상 갖고 있었습니다. 지금은 일반 회사에서 마케터로 일하고 있는데 애플 아카데미에 가면 어떤 것을 배울 수 있는지, 커리큘럼이 어떻게 되는지 궁금합니다. 그리고 무엇보다 지원할 때 어떻게 저를 어필해야 하는지, 기존 개발 지식은 필요 없는지, OO님은 지원하실 때 어떤 점을 강조하셨는지 알려주시면 준비하는데 큰 도움이 될 것 같습니다.")
+                                        .font(.title3)
+                                        .foregroundColor(Color.white)
+                                        .frame(width: 360, height: 700, alignment: .top)
+                                        .lineSpacing(15)
+                                        .padding()
                             }
                             
                             
