@@ -67,15 +67,6 @@ struct CallView: View {
                     Spacer()
                     
                     TimerView()
-                    
-                    Button(action: {
-                        
-                    }) {
-                        VStack {
-                            Image(systemName: "hourglass.badge.plus")
-                            Text("More Time")
-                        }.padding()
-                    }
                 }
                 
             }
