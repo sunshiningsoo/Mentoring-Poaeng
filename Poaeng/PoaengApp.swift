@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct PoaengApp: App {
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+            ContentView(searchKeyword: "")
         }
     }
 }
