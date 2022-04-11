@@ -12,6 +12,8 @@ struct TimerView: View {
     @State var timeRemaining = 1200
     @State var timerunnig = true
     
+    @State var plusTime:Int = 0
+    
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -44,6 +46,7 @@ struct TimerView: View {
             Spacer()
             Button (action: {
                 timeRemaining += 300
+                
             }){
                 VStack {
                     Image(systemName: "hourglass.badge.plus")

@@ -91,6 +91,9 @@ struct MentoringScreenView: View {
     @GestureState var gestureOffset: CGFloat = 0
     
     
+    @State var micOn:Bool = true //mic 아이콘 변경
+    
+    
     var body: some View {
         ZStack{
             
@@ -104,7 +107,8 @@ struct MentoringScreenView: View {
                         }) {
                             HStack{
                                 Image(systemName: "chevron.left").padding(.leading, 4.0)
-                                Text("뒤로가기")
+                                Text("나가기")
+                                    .foregroundColor(.red)
                             }
                         }
                         Spacer()
@@ -114,6 +118,7 @@ struct MentoringScreenView: View {
                             
                         }) {
                             Text("신고하기")
+                                .foregroundColor(.red)
                         }.padding(.trailing, 5.0)
                     }
                     //통화 상대방 얼굴 화면
@@ -133,17 +138,16 @@ struct MentoringScreenView: View {
                     //하단 버튼
                     HStack{
                         Button(action: {
-                            
+                            micOn.toggle()
                         }) {
                             VStack{
-                                Image(systemName: "speaker.slash.fill")
+                                Image(systemName: micOn==true ? "mic" : "mic.slash")
                                 Text("Mute")
                             }.padding()
                         }
                         Spacer()
                         
-                        //                    TimerView()
-                        //                    Callview()
+                        TimerView()
                     }
                     
                 }
@@ -219,6 +223,7 @@ struct MentoringScreenView: View {
                 )
                 
             }.ignoresSafeArea(.all, edges: .bottom)
+            .navigationBarHidden(true)
         }
     }
     
