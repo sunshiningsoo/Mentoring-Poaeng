@@ -59,7 +59,10 @@ struct ReservationView: View {
                                     UserRow(user:user)
                                 }
                                 if user.mentoringStatus == false{
-                                    NavigationLink(destination: MentoringScreenView(isShowingDetail:$isShowingDetail, user:user), isActive: $isShowingDetail){
+                                    
+//                                    NavigationLink(destination: MentoringScreenView(isShowingDetail:$isShowingDetail, user:user), isActive: $isShowingDetail)
+                                    
+                                    NavigationLink(destination:MentoringScreenView()){
                                         Text("입장하기")
                                             .offset(y:-14)
                                             .padding()
