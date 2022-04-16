@@ -2,23 +2,46 @@
 
 MC1 포앵팀의 코드입니다.
 
+# :iphone: Povida
 
-## 헥스 코드로 색상 사용하기
+A brief description of what this project does and who it's for
 
-사용하시기 전 원하는 뷰에서 아래의 Color 익스텐션을 복사 붙여넣기 하여 사용해주세요.
+## :pushpin: Features
 
-extension Color {
-    init(hex: UInt, alpha: Double = 1) {
-        self.init(
-            .sRGB,
-            red: Double((hex >> 16) & 0xff) / 255,
-            green: Double((hex >> 08) & 0xff) / 255,
-            blue: Double((hex >> 00) & 0xff) / 255,
-            opacity: alpha
-        )
-    }
-}
+- Light/dark mode toggle
+- Live previews
+- Fullscreen mode
+- Cross platform
 
-사용하실때는 아래의 코드를 참조해서 사용해주세요
 
-.background(Color(hex: 0xededea))
+## :people_hugging: Authors
+
+- [@YourName](https://www.github.com/) | [@YourName](https://www.github.com/) | [@YourName](https://www.github.com/) | [@YourName](https://www.github.com/) | [@YourName](https://www.github.com/) | [@YourName](https://www.github.com/)
+
+
+## :framed_picture: Demo
+
+Insert gif or link to demo
+
+
+## :fireworks: Screenshots
+
+![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
+![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
+![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
+![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
+![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
+![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
+
+
+## :sparkles: Skills & Tech Stack
+swiftUI ...
+
+## :books: Documentation
+
+[Documentation](https://linktodocumentation)
+
+
+## :lock_with_ink_pen: License
+
+[MIT](https://choosealicense.com/licenses/mit/)
