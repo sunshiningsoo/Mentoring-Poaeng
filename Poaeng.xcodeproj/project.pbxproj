@@ -23,11 +23,10 @@
 		DF044F312803D01C00671D15 /* ReservationConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF044F302803D01C00671D15 /* ReservationConfirmView.swift */; };
 		DF6B756D27FECDC100FD7180 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B756C27FECDC100FD7180 /* User.swift */; };
 		DF6B756F27FECE6D00FD7180 /* UsersArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B756E27FECE6D00FD7180 /* UsersArray.swift */; };
-		DF6B757127FED6DE00FD7180 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6B757027FED6DE00FD7180 /* UserDetail.swift */; };
-		DFD379FF2804050000D0A88B /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD379FE2804050000D0A88B /* BlurView.swift */; };
 		DFD37A01280408AA00D0A88B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A00280408AA00D0A88B /* TimerView.swift */; };
+		DFD37A052804226900D0A88B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A042804226900D0A88B /* AppState.swift */; };
+		DFD37A072804241100D0A88B /* AskToMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A062804241100D0A88B /* AskToMentorView.swift */; };
 		DFDE273627FE989D003478CF /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE273527FE989D003478CF /* UserRow.swift */; };
-		DFDE273827FEC0AD003478CF /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDE273727FEC0AD003478CF /* CallView.swift */; };
 		DFE45FE027FE87AB007C3606 /* MentoringScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE45FDF27FE87AB007C3606 /* MentoringScreenView.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,11 +67,10 @@
 		DF044F302803D01C00671D15 /* ReservationConfirmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationConfirmView.swift; sourceTree = "<group>"; };
 		DF6B756C27FECDC100FD7180 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DF6B756E27FECE6D00FD7180 /* UsersArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersArray.swift; sourceTree = "<group>"; };
-		DF6B757027FED6DE00FD7180 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
-		DFD379FE2804050000D0A88B /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		DFD37A00280408AA00D0A88B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		DFD37A042804226900D0A88B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		DFD37A062804241100D0A88B /* AskToMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskToMentorView.swift; sourceTree = "<group>"; };
 		DFDE273527FE989D003478CF /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
-		DFDE273727FEC0AD003478CF /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
 		DFE45FDF27FE87AB007C3606 /* MentoringScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentoringScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,9 +122,9 @@
 		7B6632A427FC246500C60FF9 /* Poaeng */ = {
 			isa = PBXGroup;
 			children = (
+				DFD37A042804226900D0A88B /* AppState.swift */,
 				7B6632A527FC246500C60FF9 /* PoaengApp.swift */,
 				7B6632A727FC246500C60FF9 /* ContentView.swift */,
-				7B6632D527FC99A000C60FF9 /* MainView.swift */,
 				DFA17B9E27FFCD8000C7BE7C /* UserModel */,
 				DFA17B9F27FFCDA900C7BE7C /* MenuTab */,
 				DFD37A0228040AD700D0A88B /* Reservation */,
@@ -168,7 +166,6 @@
 				DF6B756C27FECDC100FD7180 /* User.swift */,
 				DF6B756E27FECE6D00FD7180 /* UsersArray.swift */,
 				DFDE273527FE989D003478CF /* UserRow.swift */,
-				DF6B757027FED6DE00FD7180 /* UserDetail.swift */,
 			);
 			path = UserModel;
 			sourceTree = "<group>";
@@ -176,6 +173,7 @@
 		DFA17B9F27FFCDA900C7BE7C /* MenuTab */ = {
 			isa = PBXGroup;
 			children = (
+				7B6632D527FC99A000C60FF9 /* MainView.swift */,
 				7B6632D927FD0B3700C60FF9 /* SearchView.swift */,
 				7B6632DD27FD0B9E00C60FF9 /* ReservationView.swift */,
 				7B6632DB27FD0B7B00C60FF9 /* MyPageView.swift */,
@@ -189,6 +187,7 @@
 				DF044F2E2803C51900671D15 /* MentorListView.swift */,
 				DF044F2C2803AC3100671D15 /* MentorProfileView.swift */,
 				DF044F302803D01C00671D15 /* ReservationConfirmView.swift */,
+				DFD37A062804241100D0A88B /* AskToMentorView.swift */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
@@ -197,8 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				DFE45FDF27FE87AB007C3606 /* MentoringScreenView.swift */,
-				DFDE273727FEC0AD003478CF /* CallView.swift */,
-				DFD379FE2804050000D0A88B /* BlurView.swift */,
 				DFD37A00280408AA00D0A88B /* TimerView.swift */,
 			);
 			path = Mentoring;
@@ -335,18 +332,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6632DC27FD0B7B00C60FF9 /* MyPageView.swift in Sources */,
-				DF6B757127FED6DE00FD7180 /* UserDetail.swift in Sources */,
 				DFE45FE027FE87AB007C3606 /* MentoringScreenView.swift in Sources */,
+				DFD37A052804226900D0A88B /* AppState.swift in Sources */,
 				7B6632D627FC99A000C60FF9 /* MainView.swift in Sources */,
 				DF044F312803D01C00671D15 /* ReservationConfirmView.swift in Sources */,
 				7B6632DE27FD0B9E00C60FF9 /* ReservationView.swift in Sources */,
+				DFD37A072804241100D0A88B /* AskToMentorView.swift in Sources */,
 				7B6632DA27FD0B3700C60FF9 /* SearchView.swift in Sources */,
 				DFD37A01280408AA00D0A88B /* TimerView.swift in Sources */,
 				DF6B756F27FECE6D00FD7180 /* UsersArray.swift in Sources */,
 				DF044F2F2803C51900671D15 /* MentorListView.swift in Sources */,
-				DFD379FF2804050000D0A88B /* BlurView.swift in Sources */,
 				7B6632A827FC246500C60FF9 /* ContentView.swift in Sources */,
-				DFDE273827FEC0AD003478CF /* CallView.swift in Sources */,
 				7B6632A627FC246500C60FF9 /* PoaengApp.swift in Sources */,
 				DF6B756D27FECDC100FD7180 /* User.swift in Sources */,
 				DF044F2D2803AC3100671D15 /* MentorProfileView.swift in Sources */,

@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct PoaengApp: App {
+    @ObservedObject var appState = AppState()
+
     var body: some Scene {
-        
         WindowGroup {
-            ContentView(searchKeyword: "")
+            ContentView()
+                .environmentObject(appState)
         }
     }
 }
+ 

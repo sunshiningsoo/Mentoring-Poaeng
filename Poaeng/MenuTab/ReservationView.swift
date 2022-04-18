@@ -8,74 +8,119 @@
 import SwiftUI
 
 struct ReservationView: View {
+    @EnvironmentObject var appState: AppState
     @State var completeBool:Bool = false
-    @State private var isShowingDetail = false
     
     var body: some View {
-        NavigationView{
             VStack {
-                
                 if completeBool == false{
                     HStack{
-                        Button("예정 상담"){
-                            completeBool = false
+                        Spacer()
+                        VStack{
+                            Button("예정멘토링"){
+                                completeBool = false
+                            }
+                            .foregroundColor(.blue)
+                            .font(.system(size:20,weight:.bold))
+                            Rectangle().fill(.blue).frame(width: 90.0, height:3.0)
                         }
-                        .padding()
-                        .background(Capsule().stroke(lineWidth: 1))
-                        .foregroundColor(.blue)
-                        
-                        Button("지난 상담"){
-                            completeBool = true
+                        Spacer()
+                        VStack{
+                            Button("지난멘토링"){
+                                completeBool = true
+                            }
+                            .foregroundColor(.black)
+                            .font(.system(size:20,weight:.regular))
+                            Rectangle().fill(.white).frame(width: 90.0, height:3.0)
                         }
-                        .padding()
-                        .foregroundColor(.blue)
+                        Spacer()
+                        VStack{
+                            Text("연결중인멘토링")
+                                .lineLimit(1)
+                                .font(.system(size:20,weight:.regular))
+                            Rectangle().fill(.white).frame(width: 90.0, height:3.0)
+                        }
+                        Spacer()
                     }
                     .padding(.top)
-                }else if completeBool == true{
+                } else if completeBool == true{
                     HStack{
-                        Button("예정 상담"){
-                            completeBool = false
+                        Spacer()
+                        VStack{
+                            Button("예정멘토링"){
+                                completeBool = false
+                            }
+                            .foregroundColor(.black)
+                            .font(.system(size:20,weight:.regular))
+                            Rectangle().fill(.white).frame(width: 90.0, height:3.0)
                         }
-                        .padding()
-                        .foregroundColor(.blue)
-                        
-                        Button("지난 상담"){
-                            completeBool = true
+                        Spacer()
+                        VStack{
+                            Button("지난멘토링"){
+                                completeBool = true
+                            }
+                            .foregroundColor(.blue)
+                            .font(.system(size:20,weight:.bold))
+                            Rectangle().fill(.blue).frame(width: 90.0, height:3.0)
                         }
-                        .padding()
-                        .background(Capsule().stroke(lineWidth: 1))
-                        .foregroundColor(.blue)
+                        Spacer()
+                        VStack{
+                            Text("연결중인멘토링")
+                                .lineLimit(1)
+                                .font(.system(size:20,weight:.regular))
+                            Rectangle().fill(.white).frame(width: 90.0, height:3.0)
+                        }
+                        Spacer()
                     }
                     .padding(.top)
                 }
-                
-                
                 Divider()
                 ScrollView{
                     ForEach(users){ user in
                         if user.mentoringStatus == completeBool{
                             HStack{
-                                NavigationLink(destination: UserDetail(user:user)){
+                                NavigationLink(destination: MentorProfileView(user:user)){
                                     UserRow(user:user)
                                 }
-                                if user.mentoringStatus == false{
-                                    
-//                                    NavigationLink(destination: MentoringScreenView(isShowingDetail:$isShowingDetail, user:user), isActive: $isShowingDetail)
-                                    
-                                    NavigationLink(destination:MentoringScreenView()){
-                                        Text("입장하기")
-                                            .offset(y:-14)
+                                if user.isReadyForMentoring == true{
+                                    NavigationLink(destination:MentoringScreenView(user:user)){
+                                        Text("입장")
+                                            .font(.title3)
                                             .padding()
+                                            .foregroundColor(Color.white)
+                                            .frame(width: 100.0, height: 48.0)
+                                            .background(Color.blue)
+                                            .cornerRadius(100)
+                                            .padding(.trailing, 10.0)
                                     }
+                                    Spacer()
+                                } else {
+                                    Spacer()
+                                    Text("사전 질문")
+                                        .foregroundColor(.blue)
+                                        .offset(x:-10)
+                                        
+                                        .padding(.trailing)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 100)
+                                                    .stroke(Color.blue, lineWidth: 1)
+                                                    .frame(width: 100, height: 48)
+                                                    .padding(.trailing, 15.0)
+                                                    .offset(x:-10)
+                                            )
+                                    Spacer()
                                 }
                             }
+                            .padding(.vertical, -15.0)
+                            Rectangle()
+                                .frame(height: 1.0)
+                                .foregroundColor(Color(hex: 0xd3d7d4))
+                                .padding(.horizontal)
                         }
                     }
                 }
-            }
-            .navigationTitle("")
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
         }
     }
 }

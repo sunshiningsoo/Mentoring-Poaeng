@@ -8,20 +8,22 @@
 import SwiftUI
 
 struct ReservationConfirmView: View {
-    @Environment(\.presentationMode) var presentationMode
+//    @Environment(\.presentationMode) var presentation
+//    @EnvironmentObject var appState: AppState
+    var user:User
     
     var body: some View {
         VStack{
             VStack{
-                Image("포메")
+                Image("\(user.name)")
                     .resizable()
                     .frame(width: 250, height: 250)
                     .clipShape(Circle())
                     .overlay(Circle().stroke(lineWidth: 3).foregroundColor(Color.black))
-                Text("포메")
-                Text("애플")
+                Text("\(user.name)")
+                Text("\(user.company)")
                     .fontWeight(.black)
-                Text("iOS 개발자 | 3년~5년차")
+                Text("\(user.job) | \(user.workingYear)년차")
                     .foregroundColor(.secondary)
             }
             .padding(30)
@@ -29,24 +31,19 @@ struct ReservationConfirmView: View {
                 .font(.title2)
                 .padding()
             
-            
-//            NavigationLink(self.presentationMode.wrappedValue.dismiss()){
-//                        Text("확인")
-//                            .font(.title2)
-//                            .padding(15.0)
-//                            .foregroundColor(Color.white)
-//                            .background(Color.blue)
-//                            .cornerRadius(20)
-//                            .padding(.top, 50.0)
-//            }
-            Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }){
+            NavigationLink(destination: AskToMentorView()){
                 Text("확인")
+                    .font(.title2)
+                    .padding(15.0)
+                    .foregroundColor(Color.white)
+                    .background(Color.blue)
+                    .cornerRadius(20)
+                    .padding(.top, 50.0)
             }
             
+            
             .navigationBarHidden(true)
-  
+            
             
         }
     }
@@ -54,6 +51,6 @@ struct ReservationConfirmView: View {
 
 struct ReservationConfirmView_Previews: PreviewProvider {
     static var previews: some View {
-        ReservationConfirmView()
+        ReservationConfirmView(user: users[0])
     }
 }

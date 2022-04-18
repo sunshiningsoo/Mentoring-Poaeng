@@ -11,13 +11,13 @@ struct TimerView: View {
     
     @State var timeRemaining = 1200
     @State var timerunnig = true
+    @State var plusTime:Int = 0
     
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     func convertSecondsToTime(timeInSeconds : Int) -> String {
         let minutes = timeInSeconds / 60
-        
         let seconds = timeInSeconds % 60
         
         return String(format: "%02i:%02i", minutes,seconds)
@@ -44,24 +44,12 @@ struct TimerView: View {
             Spacer()
             Button (action: {
                 timeRemaining += 300
+                
             }){
                 VStack {
-                    Image(systemName: "hourglass.badge.plus")
                     Text("More Time")
                 } }
-            
-//            HStack(spacing: 40) {
-//                Button("Start") {
-//                    timerunnig = true
-//                }
-//                Button("Add Time") {
-//                    timeRemaining += 300
-//                }.foregroundColor(.green)
-//                Button("Stop") {
-//                    timerunnig = false
-//                }.foregroundColor(.red)
-//            }
-            
+                        
         }
     }
 
