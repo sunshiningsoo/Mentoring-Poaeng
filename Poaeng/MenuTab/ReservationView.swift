@@ -48,7 +48,9 @@ struct ReservationView: View {
                         Spacer()
                         VStack{
                             Button("예정멘토링"){
-                                completeBool = false
+                                withAnimation{
+                                    completeBool = false
+                                }
                             }
                             .foregroundColor(.black)
                             .font(.system(size:20,weight:.regular))

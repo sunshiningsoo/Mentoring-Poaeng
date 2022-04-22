@@ -64,14 +64,6 @@ struct AskToMentorView: View {
                 }
             }
             .padding([.bottom, .trailing])
-//            Button("완료"){
-//                appState.rootViewId = UUID()
-//            }
-//            .font(.system(size:17,weight:.bold))
-//                .padding(10)
-//                .foregroundColor(Color.white)
-//                .background(Color.blue)
-//                .cornerRadius(11)
         }
         .navigationBarHidden(true)
     }
